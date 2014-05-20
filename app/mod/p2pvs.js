@@ -28,6 +28,9 @@ var p2pvs = {
 	getOpponent : function(uid){
 		return Users[uid];
 	},
+	getOnlineUsers : function(){
+		return [Object.keys(Users).length, !!waitingUser];
+	},
 	off : function(uid, opponent){
 		if(waitingUser == uid){
 			clearTimeout(t[uid]);
